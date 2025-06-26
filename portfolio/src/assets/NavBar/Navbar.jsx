@@ -15,6 +15,13 @@ function Navbar({ onSectionClick }) {
         setIsOpen(!isOpen);
     }
 
+    const handleMenuItemClick = (action) => {
+        if (action) {
+            action();
+        }
+        setIsOpen(false);
+    };
+
     return (
         <div>
             <nav className='mainnav'>
@@ -28,13 +35,14 @@ function Navbar({ onSectionClick }) {
                                 key={index}
                                 to={element.route}
                                 className={({ isActive }) => (isActive ? 'active' : '')}
+                                onClick={() => setIsOpen(false)}
                             >
                                 {element.name}
                             </NavLink>
                         ) : (
                             <a
                                 key={index}
-                                onClick={element.action}
+                                onClick={() => handleMenuItemClick(element.action)}
                             >
                                 {element.name}
                             </a>
@@ -60,17 +68,18 @@ function Navbar({ onSectionClick }) {
                                 <NavLink
                                     to={element.route}
                                     className={({ isActive }) => (isActive ? 'active' : '')}
+                                    onClick={() => setIsOpen(false)}
                                 >
                                     {element.name}
                                 </NavLink>
                             </li>
                         ) : (
                             <li key={index}>
-                                <a onClick={element.action}>{element.name}</a>
+                                <a onClick={() => handleMenuItemClick(element.action)}>{element.name}</a>
                             </li>
                         )
                     ))}
-                    <li><button onClick={() => onSectionClick("Contact")}>Contact</button></li>
+                    <li><button onClick={() => handleMenuItemClick(() => onSectionClick("Contact"))}>Contact</button></li>
                 </ul>
             </motion.nav>
         </div>

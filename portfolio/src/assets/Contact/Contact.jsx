@@ -19,14 +19,13 @@ function Contact() {
         <button onClick={handleClick}>Connect</button>
       </div>
       <div className='social_media'>
-        <a>linkedin</a>
-        <a>github</a>
-        <a>InstaGram</a>
+        <a href="https://www.linkedin.com/in/thajul-niyas/">linkedin</a>
+        <a href="https://github.com/1thaju">github</a>
+        <a href="https://www.instagram.com/thaju________________?igsh=MXcwdXp4ZXoyMXNlOA==">InstaGram</a>
       </div>
       <div className='detail_cont'>
       <div className="address">
         <h2>Location <FaMapLocationDot /></h2>
-        <label>Pozhuthana</label>
         <label>Wayanad</label>
         <label>Kerala</label>
         <label>India</label>

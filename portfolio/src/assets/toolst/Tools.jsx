@@ -3,7 +3,7 @@ import './Tools.css'
 import { motion } from 'framer-motion'
 
 
-function Contact() {
+function Tools() {
   return (
     <div>
       <div  className="toolsett">
@@ -38,4 +38,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default Tools

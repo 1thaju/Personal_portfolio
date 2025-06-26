@@ -4,62 +4,98 @@ nav{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-top: 8px;
-    background-color: #252525;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #1a1a1a;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 .mainnav{
-  z-index: 10;
+  z-index: 100;
 }
-.logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
+.logo label{
     font-family: "Anton", sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
-    
+    font-size: 2.5em;
+    color: #007bff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .elements{
-    width: calc(100%/3);
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+    gap: 30px;
 }
 .elements a{
     color: white;
-    transition: all .3s;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
+    transition: all .3s ease-in-out;
 }
 .elements a:hover{
-    color: #908e9b;
-    transform: scale(1.1);
+    color: #007bff;
+}
+.elements a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #007bff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.elements a:hover::before{
+    transform: scaleX(1);
 }
 nav button{
-    background-color: white;
-    color: #908e9b;
-    padding: 8px;
-    margin-right: 8px;
-    margin-bottom: 5px;
+    background-color: transparent;
+    color: #007bff;
+    padding: 10px 20px;
+    margin-right: 0;
+    margin-bottom: 0;
     outline: none;
-    border: none;
-    border-radius: 2px;
-    transition: all .5s;
+    border: solid 1px #007bff;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
     font-family: "Poppins", sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-style: normal;
+    cursor: pointer;
+    font-size: 1em;
+    z-index: 1;
+}
+nav button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #007bff;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: -1;
 }
 nav button:hover{
-    transform: scale(1.02);
-    background-color: #908e9b;
-    color: #1b1a1e;
+    color: white;
+    transform: translateY(0);
+    box-shadow: none;
+}
+nav button:hover::before{
+    transform: translateX(0);
 }
 .hamburger {
     width: 30px;
@@ -68,14 +104,14 @@ nav button:hover{
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    margin: 5px;
+    margin-right: 15px;
+    z-index: 101;
   }
   
   .line {
-    height: 2.5px;
+    height: 3px;
     background-color: white;
     transition: all 0.3s ease;
-    z-index: 10;
   }
   
   .hamburger.open .line:nth-child(1) {
@@ -90,22 +126,32 @@ nav button:hover{
   }
   .menu {
     display: none;
-    transition: all 0.3s ease;
-    position: absolute;
-    right: 0;
-    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #212121;
+    transition: right 0.4s ease-in-out;
+    padding-top: 80px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    z-index: 99;
   }
   .menu.open {
-    display: block;
-    height: 25vh;
-    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    right: 0;
   }
   nav ul {
     list-style-type: none;
     padding: 0;
+    width: 100%;
+    text-align: center;
   }
   nav ul li {
-    margin: 10px 0;
+    margin: 20px 0;
   }
   
   nav ul li a {
@@ -115,11 +161,63 @@ nav button:hover{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
-    transition: all .3s;
+    transition: all .3s ease-in-out;
+    font-size: 1.2em;
   }  
   .hamelem a:hover{
-    transform: scaleX(1.1);
+    color: #007bff;
+    transform: scale(1.05);
   }
+  .hamelem li button{
+    background-color: transparent;
+    color: #28a745;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: solid 1px #28a745;
+    font-weight: 500;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+    z-index: 1;
+  }
+  .hamelem li button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #28a745;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: -1;
+  }
+  .hamelem li button:hover{
+    background-color: transparent;
+    color: white;
+    transform: translateY(0);
+  }
+  .hamelem li button:hover::before{
+    transform: translateX(0);
+  }
+
+  @media (max-width: 768px) {
+    nav{
+        padding: 15px 20px;
+    }
+    .logo label{
+        font-size: 2em;
+    }
+    .elements{
+        gap: 20px;
+    }
+    nav button{
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+  }
+
   @media (max-width: 576px) {
     .hamburger{
       display: flex;
@@ -129,5 +227,11 @@ nav button:hover{
     }
     .mainnav button{
       display: none;
+    }
+    .menu{
+        width: 100%;
+    }
+    .menu.open{
+        right: 0;
     }
   }

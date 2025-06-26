@@ -4,7 +4,7 @@ import './Lang.css'
 
 function Lang() {
   return (
-    <div data-scroll data-scroll-section data-scroll-speed='.1'  data-scroll-css-progress className='program'>
+    <div data-scroll data-scroll-section   className='program'>
         <div className="marquee">
       <motion.h1
       initial={{x:'0'}}

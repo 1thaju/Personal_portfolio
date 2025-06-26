@@ -4,13 +4,14 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 90vh;
+    min-height: 80vh;
     width: 100%;
+    padding: 20px;
     gap:10px;
     z-index: 1;
 }
 .intro h1{
-    font-family: "Potta One", system-ui;
+    font-family: "Anton", system-ui;
     font-weight: 600;
     font-style: normal;
     font-size: 8vw;
@@ -18,17 +19,48 @@
 .into_img{
     padding: 8px;
     border: none;
-    border-bottom:  solid 1px #252525;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 5px;
 }
 .img1{
-    height: 300px;
+    height: auto;
+    max-width: 100%;
     z-index: 1;
+}
+@media (max-width: 768px) {
+    .landing{
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+        padding: 30px 15px;
+        gap: 30px;
+    }
+    .intro {
+        order: 2;
+        text-align: center;
+    }
+    .into_img{
+        order: 1;
+        padding: 5px;
+    }
+    .img1{
+        max-width: 80%;
+        height: auto;
+    }
+    .intro h1{
+        font-size: 8vw;
+    }
 }
 @media (max-width: 576px) {
     .landing{
-        height: 80vh;
+        height: auto;
+        padding: 20px 10px;
+        gap: 20px;
     }
     .intro h1{
-        font-size: 6vw;
+        font-size: 10vw;
+    }
+    .img1{
+        max-width: 90%;
     }
 }

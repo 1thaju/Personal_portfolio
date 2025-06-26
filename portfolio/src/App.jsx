@@ -68,17 +68,25 @@ function MainContent() {
             <div data-scroll-section ref={portfolioRef}>
                 <Land />
             </div>
+            <div data-scroll-section>
                 <Lang />
+            </div>
             <div data-scroll-section ref={aboutRef}>
                 <About />
             </div>
-            <h1 className='head'>Core Competencies</h1>
-            <Knowledge>
-                {tool.map(([emoji, hueA, hueB], index) => (
-                    <Card emoji={emoji} hueA={hueA} hueB={hueB} key={index} />
-                ))}
-            </Knowledge>
-            <Tools />
+            <div data-scroll-section>
+                <h1 className='head'>Core Competencies</h1>
+            </div>
+            <div data-scroll-section>
+                <Knowledge>
+                    {tool.map(([emoji, hueA, hueB], index) => (
+                        <Card emoji={emoji} hueA={hueA} hueB={hueB} key={index} />
+                    ))}
+                </Knowledge>
+            </div>
+            <div data-scroll-section>
+                <Tools />
+            </div>
             <div data-scroll-section ref={contactRef}>
                 <Contact />
             </div>

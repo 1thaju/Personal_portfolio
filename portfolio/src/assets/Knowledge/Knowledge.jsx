@@ -39,7 +39,8 @@ export function Card({ emoji }) {
 
 export default function Knowledge({ children }) {
   return (
-    <div>
+    <div className="knowledge_main_container">
+        <h1>My Skills & Knowledge</h1>
         <div data-scroll data-scroll-speed="-0.2"className="knowledge-container">{children}</div>
         
     </div>
