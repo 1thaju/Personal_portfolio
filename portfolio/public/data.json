@@ -1,0 +1,309 @@
+{
+  "projects": [
+    {
+      "slug": "docwo",
+      "title": "Docwo - Clinic Booking Appointment App",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://docwo-frontend.vercel.app/",
+      "overview": "Full-stack clinic booking system built with React + Vite frontend, Node.js backend, PostgreSQL database, Tailwind CSS, Material UI, and Next.js. Features a real-time token system for managing appointments.",
+      "keyFeatures": [
+        "User and doctor authentication",
+        "Book, cancel, and view appointments",
+        "Admin dashboard with analytics",
+        "Real-time token system",
+        "Responsive UI with Tailwind CSS and Material UI"
+      ],
+      "challengesSolutions": [
+        {
+          "challenge": "Implementing a real-time token system for appointments",
+          "solution": "Used WebSocket and Node.js backend for live token updates"
+        },
+        {
+          "challenge": "Managing complex state and server-side data",
+          "solution": "Used React Query and optimized PostgreSQL queries"
+        }
+      ],
+      "role": "Full-stack Developer",
+      "techStack": ["Next.js", "React.js", "Node.js", "PostgreSQL", "Tailwind CSS", "Material UI", "Vite", "WebSocket"],
+      "featured": "yes"
+    },
+    {
+      "slug": "sole-savvy",
+      "title": "Sole Savvy",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://github.com/1thaju/Solesavvy",
+      "overview": "Full-stack shoe-selling e-commerce app allowing users to browse, filter, and purchase shoes. The platform supports secure authentication, product listing, and order management for a smooth shopping experience.",
+      "keyFeatures": [
+        "Product listing with filters and categories",
+        "User authentication and profiles",
+        "Secure checkout and payment flow",
+        "Order tracking and history",
+        "Admin dashboard for managing products and orders",
+        "Responsive design for mobile and desktop",
+        "Image upload and preview for products"
+      ],
+      "challengesSolutions": [
+        {
+          "challenge": "Managing user authentication and session securely",
+          "solution": "Implemented JWT-based authentication with secure storage"
+        },
+        {
+          "challenge": "Filtering and searching products efficiently",
+          "solution": "Optimized MongoDB queries and used indexing for faster search"
+        },
+        {
+          "challenge": "Handling image uploads and storage",
+          "solution": "Integrated Firebase storage for image hosting and retrieval"
+        },
+        {
+          "challenge": "Ensuring smooth front-end performance",
+          "solution": "Used React state management with optimized component rendering"
+        }
+      ],
+      "role": "Full-stack Developer",
+      "techStack": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Firebase Auth & Storage",
+        "JWT Authentication",
+        "Tailwind CSS",
+        "Redux"
+      ],
+      "featured": "yes"
+    },
+    {
+      "slug": "olx-clone",
+      "title": "OLX Clone",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://github.com/1thaju/olx",
+      "overview": "A React-based marketplace app with Firebase backend for posting, searching, and managing classifieds ads.",
+      "keyFeatures": [
+        "Post, edit, and delete ads",
+        "User authentication and profiles",
+        "Search and filter listings",
+        "Image uploads for products",
+        "Responsive UI for web and mobile"
+      ],
+      "challengesSolutions": [
+        {
+          "challenge": "Handling real-time updates for listings",
+          "solution": "Used Firebase Firestore real-time listeners"
+        },
+        {
+          "challenge": "Managing authentication and user sessions",
+          "solution": "Implemented Firebase Auth for secure login"
+        }
+      ],
+      "role": "Full-stack Developer",
+      "techStack": ["React.js", "Bootstrap", "Firebase Auth & Firestore", "CSS"],
+      "featured": "yes"
+    },
+    {
+      "slug": "netflix-clone",
+      "title": "Netflix Clone",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://github.com/1thaju/netflix_clone",
+      "overview": "A movie streaming interface inspired by Netflix, built using React and TMDB API for fetching movie data.",
+      "keyFeatures": [
+        "Browse movies by category",
+        "Dynamic movie details and posters",
+        "Responsive and animated UI",
+        "Integrated TMDB API for real-time content"
+      ],
+      "challengesSolutions": [
+        {
+          "challenge": "Efficiently fetching and caching movie data",
+          "solution": "Used Axios with React hooks and lazy loading"
+        },
+        {
+          "challenge": "Creating smooth animations",
+          "solution": "Implemented Framer Motion for transitions and effects"
+        }
+      ],
+      "role": "Frontend Developer",
+      "techStack": ["React.js", "TMDB API", "CSS", "Axios", "Framer Motion"],
+      "featured": "no"
+    },
+    {
+      "slug": "travel-package-api",
+      "title": "Travel Package API",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://github.com/1thaju/Travel-package",
+      "overview": "Backend REST API built with the MERN stack to manage travel packages with full CRUD operations.",
+      "keyFeatures": [
+        "CRUD operations for packages",
+        "MongoDB integration for data storage",
+        "Environment configuration with dotenv",
+        "CORS-enabled for frontend integration"
+      ],
+      "challengesSolutions": [
+        {
+          "challenge": "Maintaining modular backend structure",
+          "solution": "Implemented MVC architecture with separate route and controller layers"
+        }
+      ],
+      "role": "Backend Developer",
+      "techStack": ["Node.js", "Express.js", "MongoDB", "CORS", "dotenv"],
+      "featured": "no"
+    },
+    {
+      "slug": "nike-landing-page",
+      "title": "Nike Landing Page",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://github.com/1thaju/nike",
+      "overview": "A static, visually rich landing page for Nike built using HTML, CSS, and JavaScript.",
+      "keyFeatures": ["Interactive product showcase", "Smooth animations and transitions", "Fully responsive layout"],
+      "challengesSolutions": [
+        {
+          "challenge": "Creating fluid animations",
+          "solution": "Used CSS transitions and JavaScript-based scroll effects"
+        }
+      ],
+      "role": "Frontend Developer",
+      "techStack": ["HTML", "CSS", "JavaScript"],
+      "featured": "no"
+    },
+    {
+      "slug": "weather-app",
+      "title": "Weather App",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://github.com/1thaju/Solesavvy",
+      "overview": "Weather forecasting web app using OpenWeather API with a clean UI built in HTML, CSS, and JavaScript.",
+      "keyFeatures": [
+        "Real-time weather data",
+        "Search by city name",
+        "Dynamic icons and background changes based on weather"
+      ],
+      "challengesSolutions": [
+        {
+          "challenge": "Fetching API data dynamically",
+          "solution": "Used async/await and proper error handling for API calls"
+        }
+      ],
+      "role": "Frontend Developer",
+      "techStack": ["HTML", "CSS", "JavaScript", "OpenWeather API"],
+      "featured": "no"
+    },
+    {
+      "slug": "realtime-chat-application",
+      "title": "Realtime Chat Application",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://github.com/1thaju/realtime_chat_App",
+      "overview": "Real-time chat application built using Node.js, Express, and WebSocket for live communication.",
+      "keyFeatures": [
+        "Real-time bi-directional messaging",
+        "User join/leave notifications",
+        "Simple and responsive UI"
+      ],
+      "challengesSolutions": [
+        {
+          "challenge": "Maintaining real-time communication",
+          "solution": "Implemented WebSocket for instant message delivery"
+        }
+      ],
+      "role": "Backend Developer",
+      "techStack": ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "WebSocket"],
+      "featured": "no"
+    },
+    {
+      "slug": "chatbot",
+      "title": "ChatBot",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://github.com/1thaju/Chatbot_gemini",
+      "overview": "AI-powered chatbot built using React for frontend and Node.js backend with Gemini API for responses.",
+      "keyFeatures": ["Interactive chat interface", "Context-aware responses", "Integration with Gemini API","File Upload Handled by multer"],
+      "challengesSolutions": [
+        {
+          "challenge": "Integrating LLM API with frontend in real-time",
+          "solution": "Used RESTful endpoints and async handling for chat streaming"
+        }
+      ],
+      "role": "Full-stack Developer",
+      "techStack": ["React.js", "Node.js", "Gemini API", "Express.js"],
+      "featured": "no"
+    },
+    {
+      "slug": "news-app",
+      "title": "News App",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://github.com/1thaju/Solesavvy",
+      "overview": "A dynamic news aggregation app built using React and News API to fetch top headlines in real-time.",
+      "keyFeatures": ["Category-based news filters", "Responsive and clean interface", "Dynamic API integration"],
+      "challengesSolutions": [
+        {
+          "challenge": "Managing API request limits",
+          "solution": "Implemented caching and debounced user input for performance"
+        }
+      ],
+      "role": "Frontend Developer",
+      "techStack": ["React.js", "News API", "Bootstrap"],
+      "featured": "no"
+    },
+   
+    {
+      "slug": "website-performance-analyzer",
+      "title": "Website Performance Analyzer",
+      "image":"/ecommerce-platform.jpg",
+      "link":"https://github.com/1thaju/Solesavvy",
+      "overview": "A backend tool that analyzes website performance metrics using Node.js and Puppeteer.",
+      "keyFeatures": [
+        "Automated page load time tracking",
+        "Network request analysis",
+        "Screenshot capture and report generation"
+      ],
+      "challengesSolutions": [
+        {
+          "challenge": "Handling headless browser operations efficiently",
+          "solution": "Used Puppeteer with optimized settings for faster load and reduced memory usage"
+        }
+      ],
+      "role": "Backend Developer",
+      "techStack": ["Node.js", "Puppeteer", "Express.js"],
+      "featured": "no"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Full Stack Developer - Intern",
+      "company": "The Media Ant",
+      "duration": "Sep 2025 - Dec 2025"
+    },
+    {
+      "role": "Full Stack Developer",
+      "company": "Docwo",
+      "duration": "Jun 2025 - Sep 2025"
+    }
+  ],
+  "skills": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "MongoDB",
+    "REST APIs",
+    "Gemini API",
+    "Python",
+    "Git",
+    "AWS",
+    "Vercel",
+    "GitHub",
+    "Postman",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "JCT College of Engineering and Technology",
+      "year": "2021-2025",
+      "cgpa": "8.1/10"
+    }
+  ]
+}
