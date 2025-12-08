@@ -1,7 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { CursorFog } from "@/components/cursor-fog";
@@ -86,6 +85,16 @@ export const metadata: Metadata = {
     "geo.placename": "Wayanad",
     "geo.position": "11.6854;76.1320",
     ICBM: "11.6854, 76.1320",
+    "theme-color": "#000000",
+    "format-detection": "telephone=yes",
+    "language": "English",
+    "author": "Thajul Niyas",
+    "contact": "thajulniyas100@gmail.com",
+    "reply-to": "thajulniyas100@gmail.com",
+    "coverage": "Worldwide",
+    "distribution": "Global",
+    "rating": "General",
+    "revisit-after": "7 days",
   },
 };
 
@@ -95,55 +104,296 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Structured Data (JSON-LD)
-  const jsonLd = {
+
+  const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Thajul Niyas",
+    alternateName: "Thaju",
     jobTitle: "Freelance Full Stack Developer",
+    description:
+      "Top-rated Freelance Web Developer in Wayanad, Kerala, India. Specializing in Next.js, React, Node.js, Express.js, MongoDB, PostgreSQL, and AWS. Building high-performance web applications for global clients.",
     url: "https://thaju.vercel.app",
-    sameAs: [
-      "https://github.com/1thaju",
-      "https://linkedin.com/in/thajul",
-    ],
+    image: "https://thaju.vercel.app/thaju.png",
+    email: "thajulniyas100@gmail.com",
+    telephone: "+91-7736701050",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Wayanad",
       addressRegion: "Kerala",
-      addressCountry: "India",
+      postalCode: "673579",
+      addressCountry: "IN",
     },
-    description:
-      "Top-rated Freelance Web Developer in Wayanad, Kerala specializing in Next.js, React, Node.js, and modern web technologies.",
+    sameAs: [
+      "https://github.com/1thaju",
+      "https://linkedin.com/in/thajul-niyas",
+      "https://www.instagram.com/thaju.n_",
+    ],
     knowsAbout: [
       "Next.js",
       "React.js",
+      "TypeScript",
       "Node.js",
       "Express.js",
       "MongoDB",
       "PostgreSQL",
-      "API Development",
+      "REST APIs",
       "AWS",
+      "Vercel",
+      "Git",
+      "Tailwind CSS",
+      "Full Stack Development",
+      "Web Development",
+      "API Development",
+      "Frontend Development",
+      "Backend Development",
+    ],
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "JCT College of Engineering and Technology",
+    },
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Degree",
+      educationalLevel: "Bachelor's Degree",
+      about: "Computer Science",
+    },
+  };
+
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Thajul Niyas - Freelance Web Development Services",
+    description:
+      "Professional freelance web development services specializing in Next.js, React, Node.js, and full-stack development. Based in Wayanad, Kerala, serving clients worldwide.",
+    provider: {
+      "@type": "Person",
+      name: "Thajul Niyas",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Worldwide",
+    },
+    serviceType: [
+      "Web Development",
+      "Full Stack Development",
+      "Frontend Development",
+      "Backend Development",
+      "API Development",
+      "React Development",
+      "Next.js Development",
+      "Node.js Development",
+    ],
+    url: "https://thaju.vercel.app",
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Thajul Niyas",
+    legalName: "Thajul Niyas",
+    url: "https://thaju.vercel.app",
+    logo: "https://thaju.vercel.app/thaju.png",
+    founder: {
+      "@type": "Person",
+      name: "Thajul Niyas",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-7736701050",
+      contactType: "Customer Service",
+      email: "thajulniyas100@gmail.com",
+      areaServed: "Worldwide",
+      availableLanguage: ["English", "Malayalam"],
+    },
+    sameAs: [
+      "https://github.com/1thaju",
+      "https://linkedin.com/in/thajul-niyas",
     ],
   };
 
-  return (
-   <html lang="en" suppressHydrationWarning>
-    <head>
-      <Script
-        id="schema-json"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-    </head>
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Thajul Niyas Portfolio",
+    alternateName: "Thaju Portfolio",
+    url: "https://thaju.vercel.app",
+    description:
+      "Portfolio website of Thajul Niyas, a freelance full-stack developer based in Wayanad, Kerala, India. Specializing in Next.js, React, Node.js, and modern web technologies.",
+    publisher: {
+      "@type": "Person",
+      name: "Thajul Niyas",
+    },
+    inLanguage: "en-US",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://thaju.vercel.app/projects?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
 
-    <body className={`${inter.className} font-sans antialiased`}>
-      <ThemeProvider>
-        <CursorFog />
-        {children}
-        <Analytics />
-      </ThemeProvider>
-    </body>
-  </html>
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Thajul Niyas - Freelance Web Developer",
+    image: "https://thaju.vercel.app/thaju.png",
+    "@id": "https://thaju.vercel.app",
+    url: "https://thaju.vercel.app",
+    telephone: "+91-7736701050",
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Wayanad",
+      addressLocality: "Wayanad",
+      addressRegion: "Kerala",
+      postalCode: "673579",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 11.6854,
+      longitude: 76.132,
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Worldwide",
+    },
+  };
+
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://thaju.vercel.app",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About",
+        item: "https://thaju.vercel.app/about",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Projects",
+        item: "https://thaju.vercel.app/projects",
+      },
+    ],
+  };
+
+  const servicesSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: "Web Development",
+      provider: {
+        "@type": "Person",
+        name: "Thajul Niyas",
+      },
+      areaServed: "Worldwide",
+      description: "Custom web application development using Next.js and React",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: "Full Stack Development",
+      provider: {
+        "@type": "Person",
+        name: "Thajul Niyas",
+      },
+      areaServed: "Worldwide",
+      description: "End-to-end full-stack development with Node.js, Express.js, and modern databases",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: "API Development",
+      provider: {
+        "@type": "Person",
+        name: "Thajul Niyas",
+      },
+      areaServed: "Worldwide",
+      description: "RESTful API development and integration services",
+    },
+  ];
+
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${inter.className} font-sans antialiased`}
+        style={{ "--font-poppins": poppins.style.fontFamily } as React.CSSProperties}
+      >
+     
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        
+ \
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+        />
+        
+    
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        
+    
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        
+       
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        
+        {servicesSchema.map((service, index) => (
+          <script
+            key={`service-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}
+          />
+        ))}
+
+        <ThemeProvider>
+          <CursorFog />
+          {children}
+          <Analytics />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
