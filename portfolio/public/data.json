@@ -1,10 +1,44 @@
 {
   "projects": [
     {
+      "slug": "ai-refactor-cli",
+      "title": "AI-Powered Code Refactor CLI",
+      "image": "/code-refactor-tool.jpg",
+      "link": "https://github.com/1thaju/Code-Refactor",
+      "overview": "An intelligent CLI agent that combines Static Analysis (AST) with Generative AI (Google Gemini) to automatically detect complexity, enforce type safety, and rewrite 'dirty' code without breaking syntax.",
+      "keyFeatures": [
+        "Semantic AI Review using Google Gemini 1.5 Flash",
+        "AST-Based Mutations for safe, non-destructive refactoring",
+        "Cyclomatic Complexity Analysis to calculate cognitive load",
+        "Interactive 'Human-in-the-Loop' workflow with visual Diff Views",
+        "Git Safety Guards to prevent data loss on dirty repositories"
+      ],
+      "challengesSolutions": [
+        {
+          "challenge": "Preventing AI hallucinations from breaking code syntax",
+          "solution": "Implemented a 3-stage pipeline using AST parsing (ts-morph) to validate code structure before application"
+        },
+        {
+          "challenge": "Handling dangerous automated edits safely",
+          "solution": "Engineered a safety system with Git status checks and a confirm-before-apply interactive menu"
+        }
+      ],
+      "role": "Tooling Engineer",
+      "techStack": [
+        "TypeScript",
+        "Node.js",
+        "Google Gemini API",
+        "ts-morph (AST)",
+        "Commander.js",
+        "Inquirer.js"
+      ],
+      "featured": "yes"
+    },
+    {
       "slug": "docwo",
       "title": "Docwo - Clinic Booking Appointment App",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://docwo-frontend.vercel.app/",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://docwo-frontend.vercel.app/",
       "overview": "Full-stack clinic booking system built with React + Vite frontend, Node.js backend, PostgreSQL database, Tailwind CSS, Material UI, and Next.js. Features a real-time token system for managing appointments.",
       "keyFeatures": [
         "User and doctor authentication",
@@ -24,14 +58,23 @@
         }
       ],
       "role": "Full-stack Developer",
-      "techStack": ["Next.js", "React.js", "Node.js", "PostgreSQL", "Tailwind CSS", "Material UI", "Vite", "WebSocket"],
+      "techStack": [
+        "Next.js",
+        "React.js",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Material UI",
+        "Vite",
+        "WebSocket"
+      ],
       "featured": "yes"
     },
     {
       "slug": "sole-savvy",
       "title": "Sole Savvy",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://github.com/1thaju/Solesavvy",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://github.com/1thaju/Solesavvy",
       "overview": "Full-stack shoe-selling e-commerce app allowing users to browse, filter, and purchase shoes. The platform supports secure authentication, product listing, and order management for a smooth shopping experience.",
       "keyFeatures": [
         "Product listing with filters and categories",
@@ -76,8 +119,8 @@
     {
       "slug": "olx-clone",
       "title": "OLX Clone",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://github.com/1thaju/olx",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://github.com/1thaju/olx",
       "overview": "A React-based marketplace app with Firebase backend for posting, searching, and managing classifieds ads.",
       "keyFeatures": [
         "Post, edit, and delete ads",
@@ -97,14 +140,19 @@
         }
       ],
       "role": "Full-stack Developer",
-      "techStack": ["React.js", "Bootstrap", "Firebase Auth & Firestore", "CSS"],
+      "techStack": [
+        "React.js",
+        "Bootstrap",
+        "Firebase Auth & Firestore",
+        "CSS"
+      ],
       "featured": "yes"
     },
     {
       "slug": "netflix-clone",
       "title": "Netflix Clone",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://github.com/1thaju/netflix_clone",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://github.com/1thaju/netflix_clone",
       "overview": "A movie streaming interface inspired by Netflix, built using React and TMDB API for fetching movie data.",
       "keyFeatures": [
         "Browse movies by category",
@@ -123,14 +171,20 @@
         }
       ],
       "role": "Frontend Developer",
-      "techStack": ["React.js", "TMDB API", "CSS", "Axios", "Framer Motion"],
+      "techStack": [
+        "React.js",
+        "TMDB API",
+        "CSS",
+        "Axios",
+        "Framer Motion"
+      ],
       "featured": "no"
     },
     {
       "slug": "travel-package-api",
       "title": "Travel Package API",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://github.com/1thaju/Travel-package",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://github.com/1thaju/Travel-package",
       "overview": "Backend REST API built with the MERN stack to manage travel packages with full CRUD operations.",
       "keyFeatures": [
         "CRUD operations for packages",
@@ -145,16 +199,26 @@
         }
       ],
       "role": "Backend Developer",
-      "techStack": ["Node.js", "Express.js", "MongoDB", "CORS", "dotenv"],
+      "techStack": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "CORS",
+        "dotenv"
+      ],
       "featured": "no"
     },
     {
       "slug": "nike-landing-page",
       "title": "Nike Landing Page",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://github.com/1thaju/nike",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://github.com/1thaju/nike",
       "overview": "A static, visually rich landing page for Nike built using HTML, CSS, and JavaScript.",
-      "keyFeatures": ["Interactive product showcase", "Smooth animations and transitions", "Fully responsive layout"],
+      "keyFeatures": [
+        "Interactive product showcase",
+        "Smooth animations and transitions",
+        "Fully responsive layout"
+      ],
       "challengesSolutions": [
         {
           "challenge": "Creating fluid animations",
@@ -162,14 +226,18 @@
         }
       ],
       "role": "Frontend Developer",
-      "techStack": ["HTML", "CSS", "JavaScript"],
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "featured": "no"
     },
     {
       "slug": "weather-app",
       "title": "Weather App",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://github.com/1thaju/Solesavvy",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://github.com/1thaju/Solesavvy",
       "overview": "Weather forecasting web app using OpenWeather API with a clean UI built in HTML, CSS, and JavaScript.",
       "keyFeatures": [
         "Real-time weather data",
@@ -183,14 +251,19 @@
         }
       ],
       "role": "Frontend Developer",
-      "techStack": ["HTML", "CSS", "JavaScript", "OpenWeather API"],
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "OpenWeather API"
+      ],
       "featured": "no"
     },
     {
       "slug": "realtime-chat-application",
       "title": "Realtime Chat Application",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://github.com/1thaju/realtime_chat_App",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://github.com/1thaju/realtime_chat_App",
       "overview": "Real-time chat application built using Node.js, Express, and WebSocket for live communication.",
       "keyFeatures": [
         "Real-time bi-directional messaging",
@@ -204,16 +277,28 @@
         }
       ],
       "role": "Backend Developer",
-      "techStack": ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "WebSocket"],
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Express.js",
+        "WebSocket"
+      ],
       "featured": "no"
     },
     {
       "slug": "chatbot",
       "title": "ChatBot",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://github.com/1thaju/Chatbot_gemini",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://github.com/1thaju/Chatbot_gemini",
       "overview": "AI-powered chatbot built using React for frontend and Node.js backend with Gemini API for responses.",
-      "keyFeatures": ["Interactive chat interface", "Context-aware responses", "Integration with Gemini API","File Upload Handled by multer"],
+      "keyFeatures": [
+        "Interactive chat interface",
+        "Context-aware responses",
+        "Integration with Gemini API",
+        "File Upload Handled by multer"
+      ],
       "challengesSolutions": [
         {
           "challenge": "Integrating LLM API with frontend in real-time",
@@ -221,16 +306,25 @@
         }
       ],
       "role": "Full-stack Developer",
-      "techStack": ["React.js", "Node.js", "Gemini API", "Express.js"],
+      "techStack": [
+        "React.js",
+        "Node.js",
+        "Gemini API",
+        "Express.js"
+      ],
       "featured": "no"
     },
     {
       "slug": "news-app",
       "title": "News App",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://github.com/1thaju/Solesavvy",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://github.com/1thaju/Solesavvy",
       "overview": "A dynamic news aggregation app built using React and News API to fetch top headlines in real-time.",
-      "keyFeatures": ["Category-based news filters", "Responsive and clean interface", "Dynamic API integration"],
+      "keyFeatures": [
+        "Category-based news filters",
+        "Responsive and clean interface",
+        "Dynamic API integration"
+      ],
       "challengesSolutions": [
         {
           "challenge": "Managing API request limits",
@@ -238,15 +332,18 @@
         }
       ],
       "role": "Frontend Developer",
-      "techStack": ["React.js", "News API", "Bootstrap"],
+      "techStack": [
+        "React.js",
+        "News API",
+        "Bootstrap"
+      ],
       "featured": "no"
     },
-   
     {
       "slug": "website-performance-analyzer",
       "title": "Website Performance Analyzer",
-      "image":"/ecommerce-platform.jpg",
-      "link":"https://github.com/1thaju/Solesavvy",
+      "image": "/ecommerce-platform.jpg",
+      "link": "https://github.com/1thaju/Solesavvy",
       "overview": "A backend tool that analyzes website performance metrics using Node.js and Puppeteer.",
       "keyFeatures": [
         "Automated page load time tracking",
@@ -260,7 +357,11 @@
         }
       ],
       "role": "Backend Developer",
-      "techStack": ["Node.js", "Puppeteer", "Express.js"],
+      "techStack": [
+        "Node.js",
+        "Puppeteer",
+        "Express.js"
+      ],
       "featured": "no"
     }
   ],
