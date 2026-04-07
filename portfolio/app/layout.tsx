@@ -1,13 +1,14 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Outfit, Syne } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { CursorFog } from "@/components/cursor-fog";
+import { SmoothScroll } from "@/components/smooth-scroll";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-const poppins = Poppins({ subsets: ["latin"], weight: ["700", "800"] });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-sans" });
+const syne = Syne({ subsets: ["latin"], variable: "--font-serif" });
 
 
 export const metadata: Metadata = {
@@ -342,16 +343,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} font-sans antialiased`}
-        style={{ "--font-poppins": poppins.style.fontFamily } as React.CSSProperties}
+        className={`${outfit.variable} ${syne.variable} font-sans antialiased`}
+        style={{ "--font-poppins": syne.style.fontFamily } as React.CSSProperties}
       >
      
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-        
- \
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
@@ -389,9 +388,11 @@ export default function RootLayout({
         ))}
 
         <ThemeProvider>
-          <CursorFog />
-          {children}
-          <Analytics />
+          <SmoothScroll>
+            <CursorFog />
+            {children}
+            <Analytics />
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>
