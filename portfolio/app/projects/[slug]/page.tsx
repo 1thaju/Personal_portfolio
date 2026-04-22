@@ -165,7 +165,7 @@ export default function ProjectDetails() {
                 className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
               >
                 <Github className="w-4 h-4" />
-                View on GitHub
+                Explore
               </a>
               {/* <a
                 href={project.links?.demo || "#"}

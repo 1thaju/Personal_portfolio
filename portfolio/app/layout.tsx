@@ -341,9 +341,9 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="bg-white">
       <body
-        className={`${outfit.variable} ${syne.variable} font-sans antialiased`}
+        className={`${outfit.variable} ${syne.variable} font-sans antialiased bg-white`}
         style={{ "--font-poppins": syne.style.fontFamily } as React.CSSProperties}
       >
      

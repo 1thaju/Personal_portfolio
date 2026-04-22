@@ -1,6 +1,52 @@
 {
   "projects": [
     {
+      "slug": "trackwise-ai-vault",
+      "title": "TrackWise: AI-Powered Productivity Vault Chrome Extension",
+      "image": "/trackwise-vault.jpg",
+      "link": "https://github.com/1thaju/TrackWise-Chrome-Extension",
+      "overview": "An intelligent AI-driven Chrome extension that revolutionizes knowledge management by combining web clipping, generative AI summarization, and RAG-based chat. TrackWise acts as your 'Second Brain'—automatically extracting actionable insights from web content with Gemini AI",
+      "keyFeatures": [
+        "Smart Clipping with Gemini AI 2.5 Flash for automatic summarization, tagging, and deadline extraction",
+        "Context-Aware Vault Chat using Retrieval-Augmented Generation (RAG) to answer questions from saved clips",
+        "Automated DevOps Cron Jobs that send HTML reminder emails 24 hours before task deadlines",
+        "Resilient Offline Architecture with chrome.storage.local for airplane-mode queuing and auto-sync",
+        "Full-Stack MERN Integration with MongoDB persistence and Express REST APIs",
+        "AI-Powered Task Management with custom deadline tracking and completion status"
+      ],
+      "challengesSolutions": [
+        {
+          "challenge": "Ensuring reliable AI-based content extraction without hallucinations or invalid data",
+          "solution": "Implemented robust JSON parsing with regex fallback and strict prompt engineering with Gemini 2.5 Flash to enforce structured output (summary, tags, deadline)"
+        },
+        {
+          "challenge": "Managing offline connectivity and preventing data loss during sync gaps",
+          "solution": "Engineered offline-first architecture using Chrome's chrome.storage.local API with error interception and automatic queue-based sync on reconnection"
+        },
+        {
+          "challenge": "Handling automated deadline-based notifications at scale",
+          "solution": "Built a stateless cron-based scheduler using node-cron that checks MongoDB hourly and sends templated HTML emails via nodemailer only when deadlines fall within 24-hour window"
+        }
+      ],
+      "role": "Full-Stack Engineer",
+      "techStack": [
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Google Gemini API 2.5 Flash",
+        "Mongoose ODM",
+        "Chrome Extension APIs (Manifest v3)",
+        "node-cron",
+        "nodemailer",
+        "Axios",
+        "Lucide React Icons"
+      ],
+      "featured": "yes"
+    },
+    {
       "slug": "ai-refactor-cli",
       "title": "AI-Powered Code Refactor CLI",
       "image": "/code-refactor-tool.jpg",

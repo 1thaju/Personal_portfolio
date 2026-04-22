@@ -35,18 +35,20 @@ function StackedCard({ project, index, progress, range, targetScale }: any) {
 
   return (
     <motion.div ref={containerRef} className="h-screen flex items-center justify-center sticky top-0" style={{ scale, top: `calc(1vh + ${index * 30}px)` }}>
-       <SpotlightCard className="w-full max-w-[1000px] h-auto min-h-[60vh] max-h-[85vh] lg:h-[75vh] bg-[linear-gradient(110deg,#1e1e1e,45%,#2a2a2a,55%,#1e1e1e)] backdrop-blur-3xl border border-white/10 rounded-[30px] md:rounded-[40px] p-6 lg:p-12 flex flex-col lg:flex-row gap-6 md:gap-8 overflow-hidden overflow-y-auto lg:overflow-hidden relative shadow-2xl shadow-black/50 mx-4">
-          <div className="flex-1 flex flex-col justify-start lg:justify-center space-y-6 md:space-y-8 z-10 py-4 h-full">
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white leading-tight">{project.title}</h3>
-            <p className="text-muted-foreground text-lg md:text-xl font-light leading-relaxed max-w-lg">{project.description}</p>
-            <div className="flex flex-wrap gap-2 pt-2 md:pt-4">
-              {project.tags.map((tag: string) => (
-                <span key={tag} className="px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-semibold bg-white/5 text-white rounded-full border border-white/10 uppercase tracking-widest backdrop-blur-md">
-                  {tag}
-                </span>
-              ))}
+       <SpotlightCard className="w-full max-w-[1000px] h-auto min-h-[60vh] max-h-[85vh] lg:h-[75vh] bg-[linear-gradient(110deg,#1e1e1e,45%,#2a2a2a,55%,#1e1e1e)] backdrop-blur-3xl border border-white/10 rounded-[30px] md:rounded-[40px] p-6 lg:p-12 flex flex-col lg:flex-row gap-6 md:gap-8 overflow-hidden relative shadow-2xl shadow-black/50 mx-4">
+          <div className="flex-1 flex flex-col justify-between z-10 h-full min-h-0">
+            <div className="space-y-6 md:space-y-8 overflow-y-auto pr-3 custom-scrollbar">
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white leading-tight">{project.title}</h3>
+              <p className="text-muted-foreground text-lg md:text-xl font-light leading-relaxed max-w-lg">{project.description}</p>
+              <div className="flex flex-wrap gap-2 pt-2 md:pt-4">
+                {project.tags.map((tag: string) => (
+                  <span key={tag} className="px-4 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-semibold bg-white/5 text-white rounded-full border border-white/10 uppercase tracking-widest backdrop-blur-md">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="pt-4 md:pt-8 pb-2">
+            <div className="pt-6 md:pt-8 pb-2 flex-shrink-0">
               <Magnetic>
                   <Link href={`/projects/${project.slug}`} className="group inline-flex items-center gap-3 md:gap-4 text-black font-semibold w-fit bg-white px-6 md:px-8 py-3 md:py-4 rounded-full transition-all hover:scale-105">
                     View Case Study 
